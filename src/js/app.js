@@ -33,14 +33,14 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${variables.name}, ${variables.lastName}</h1>
+          <h2>${variables.role}</h2>
+          <h3>${variables.city}, ${variables.country}</h3>
+          <ul class=${variables.socialMediaPosition}>            
+            <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -54,9 +54,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://media.musiciansfriend.com/is/image/MMGS7/40th-Anniversary-Jazz-Bass-Vintage-Edition-Satin-Seafoam-Green/L92326000001000-00-500x500.jpg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://scontent.fopo5-1.fna.fbcdn.net/v/t39.30808-6/408205283_10160381148982946_4307163916630545827_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TL2LnDoIxoIAX8xQqWU&_nc_ht=scontent.fopo5-1.fna&oh=00_AfCdgjN1vJjZ9ank8G0i_7FSVkJXbALkLaa2GDeMNEQw2w&oe=65D9EFA8",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
@@ -75,6 +77,7 @@ window.onload = function() {
   document.querySelectorAll(".picker").forEach(function(elm) {
     elm.addEventListener("change", function(e) {
       // <- add a listener to every input
+
       const attribute = e.target.getAttribute("for"); // when any input changes, collect the value
       let values = {};
       values[attribute] =
@@ -85,6 +88,8 @@ window.onload = function() {
           : this.value == "false"
           ? false
           : this.value;
+      console.log("values");
+      console.log(values);
       render(Object.assign(window.variables, values)); // render again the card with new values
     });
   });
