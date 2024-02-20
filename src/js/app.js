@@ -41,6 +41,7 @@ function render(variables = {}) {
             <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
             <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
+            <img src="${variables.profilePic}" class="photo" />
           </ul>
         </div>
     `;
