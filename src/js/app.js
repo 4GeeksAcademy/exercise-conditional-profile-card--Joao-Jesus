@@ -40,8 +40,8 @@ function render(variables = {}) {
             <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
             <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
             <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
-            <img src="${variables.profilePic}" class="photo" />
+            <li><a href=${variables.instagram}><i class="fab fa-instagram"></i></a></li>
+            
           </ul>
         </div>
     `;
@@ -64,9 +64,9 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: null,
-    linkedin: null,
-    instagram: null,
+    github: "https://github.com/joaoaugusto-jesus",
+    linkedin: "https://www.linkedin.com/in/joao-augusto-jesus/",
+    instagram: "https://www.instagram.com/joaoaugustojesus",
     name: null,
     lastName: null,
     role: null,
