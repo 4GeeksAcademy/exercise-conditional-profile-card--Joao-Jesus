@@ -55,18 +55,17 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background:
-      "https://media.musiciansfriend.com/is/image/MMGS7/40th-Anniversary-Jazz-Bass-Vintage-Edition-Satin-Seafoam-Green/L92326000001000-00-500x500.jpg",
+    background: null,
     // this is the url for the profile avatar
-    avatarURL:
-      "https://scontent.fopo5-1.fna.fbcdn.net/v/t39.30808-6/408205283_10160381148982946_4307163916630545827_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TL2LnDoIxoIAX8xQqWU&_nc_ht=scontent.fopo5-1.fna&oh=00_AfCdgjN1vJjZ9ank8G0i_7FSVkJXbALkLaa2GDeMNEQw2w&oe=65D9EFA8",
+    avatarURL: null,
+
     // social media bar position (left or right)
-    socialMediaPosition: "position-left",
+    socialMediaPosition: "right",
     // social media usernames
     twitter: null,
-    github: "https://github.com/joaoaugusto-jesus",
-    linkedin: "https://www.linkedin.com/in/joao-augusto-jesus/",
-    instagram: "https://www.instagram.com/joaoaugustojesus",
+    github: null,
+    linkedin: null,
+    instagram: null,
     name: null,
     lastName: null,
     role: null,
